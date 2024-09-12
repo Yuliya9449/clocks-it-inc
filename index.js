@@ -8,9 +8,10 @@ const startButton = document.getElementById('start');
 // });
 startButton.addEventListener('click', function () {
   // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ setInterval
+  clearInterval(timerId);
+
   timerId = setInterval(updateClock, 1000); // запускаем  updateClock() каждую секунду
 });
-
 
 // const stopButton = ДОКУМЕНТ.ГЕТэЛЕМЕНТбАЙаЙДИ(КАКОЙ - ТО);
 const stopButton = document.getElementById('stop');
@@ -27,6 +28,7 @@ function updateClock() {
   const clock = document.getElementById('clock');
   // НУЖНО ПОГУГЛИТЬ ЧТО ТАКОЕ new Date()
   // const now = НОВАЯдАТА();
+
   const now = new Date();
   // const hours = now.ДАЙчАСЫ();
   const hours = now.getHours();
